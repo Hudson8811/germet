@@ -78,3 +78,42 @@ jQuery(document).ready(function( $ ) {
 
 }); //ready
 
+$(document).ready(function () {
+  AOS.init();
+  
+  const accordions = document.querySelectorAll(".accordion");
+
+  const openAccordion = (accordion) => {
+    let headerHeight = 0;
+    const content = accordion.querySelector(".accordion__content");
+    accordion.classList.add("accordion__active");
+    var accordionActiveHeaight = $(".accordion__active .accordion__content").height();
+    if (typeof (accordionActiveHeaight) === "undefined") {
+      accordionActiveHeaight = 0;
+    }
+    content.style.maxHeight = content.scrollHeight + "px";
+    $('html, body').stop().animate({ scrollTop: $(accordion).offset().top - accordionActiveHeaight - headerHeight }, 300);
+  };
+
+  const closeAccordion = (accordion) => {
+    const content = accordion.querySelector(".accordion__content");
+    accordion.classList.remove("accordion__active");
+    content.style.maxHeight = null;
+  };
+
+  accordions.forEach((accordion) => {
+    const intro = accordion.querySelector(".accordion__intro");
+    const content = accordion.querySelector(".accordion__content");
+
+    intro.onclick = () => {
+      if (content.style.maxHeight) {
+        closeAccordion(accordion);
+      } else {
+        openAccordion(accordion);
+        $(accordions).not($(accordion)).each(function () {
+          closeAccordion($(this)[0]);
+        });
+      }
+    };
+  });
+});

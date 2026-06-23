@@ -380,7 +380,7 @@ body {
 
 .germetic-land__logo {
   display: inline-block;
-  width: 58px; }
+  width: 181px; }
   .germetic-land__logo img {
     max-width: 100%;
     height: auto; }
@@ -624,7 +624,7 @@ body {
 @media (max-width: 1199px) {
   .germetic-land__logo-mob {
     display: block;
-    width: 55px; }
+    width: 181px; }
     .germetic-land__logo-mob img {
       max-width: 100%;
       height: auto;
@@ -812,3 +812,628 @@ body.active {
     opacity: 0.4; }
   body.active .get {
     opacity: 0.4; }
+
+
+
+
+
+
+.block7 *,
+.block7 *::before,
+.block7 *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.block7 {
+  font-family: 'Proxima Nova', tahoma, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.block7 a {
+  color: #191919;
+  text-decoration: none;
+}
+
+/* --- Контейнер блока --- */
+.block7 {
+  background: #fff;
+  padding-bottom: 60px;
+}
+
+.block7_content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px 40px 0;
+}
+
+.block7_title {
+  font-size: 50px;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.block7_title span {
+  color: #aaa;
+}
+
+/* --- Полезные материалы --- */
+.section6 {
+  position: relative;
+  top: 0vh;
+  left: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  z-index: 30;
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column nowrap;
+  background: #fff;
+  padding-top: 3.1833910035vw;
+}
+
+.section6__title {
+  width: 100%;
+  position: relative;
+  display: block;
+  z-index: 25;
+  color: rgb(25, 25, 25);
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 60px;
+}
+
+.section6__title span {
+  color: rgb(133, 135, 140)
+}
+
+/* --- Аккордеоны (базовые стили) --- */
+.accordions {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  margin-top: 3.1833910035vw;
+}
+
+.accordion {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1.937716263vw;
+  display: block;
+}
+
+.accordion__intro {
+  position: relative;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.937716263vw;
+  line-height: 2.3529411765vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #191919;
+  border-radius: 0;
+  padding-top: 1.5916955017vw;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.accordion__intro p {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.937716263vw;
+  line-height: 2.3529411765vw;
+}
+
+.accordion__intro .accordion__intro__img {
+  position: relative;
+  width: 4.0830449827vw;
+  min-width: 4.0830449827vw;
+  height: 4.0830449827vw;
+  min-height: 4.0830449827vw;
+  background: #F0F0F0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion__intro .accordion__intro__img svg {
+  animation-name: rotationClose;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.accordion__active .accordion__intro .accordion__intro__img svg {
+  animation-name: rotationOpen;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  will-change: max-height;
+  transition: all 0.25s ease-out;
+  opacity: 0;
+  padding-top: 0;
+}
+
+.accordion__active .accordion__content {
+  background: #fff;
+  opacity: 1;
+  width: 100%;
+}
+
+.accordion__intro .accordion__intro__img:hover {
+  background: #ED1C24;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.accordion__intro .accordion__intro__img:hover svg {
+  fill: #fff;
+}
+
+.accordion__intro .accordion__intro__img:hover svg path {
+  fill: #fff;
+}
+
+@keyframes rotationOpen {
+  0% {
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform-origin: 50% 50%;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotationClose {
+  0% {
+    transform-origin: 50% 50%;
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+  }
+}
+
+/* --- Аккордеоны внутри kley-landing-questions (переопределения) --- */
+.kley-landing-questions .accordions {
+  width: 100%;
+}
+
+.kley-landing-questions .accordion {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 15px;
+  display: block;
+}
+
+@media only screen and (max-width: 992px) {
+  .kley-landing-questions .accordion {
+    margin-bottom: 25px;
+  }
+}
+
+.kley-landing-questions .accordion__intro {
+  position: relative;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 91.3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 0;
+  padding-top: 23px;
+  border-top: 1px solid #ccc;
+}
+
+.kley-landing-questions .accordion__intro p {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  color: #191919;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 91.3%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.kley-landing-questions .accordion__intro .accordion__intro__img {
+  position: relative;
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  min-height: 50px;
+  background: #F0F0F0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .kley-landing-questions .accordion__intro .accordion__intro__img {
+    width: 51px;
+    min-width: 51px;
+    height: 51px;
+    min-height: 51px;
+  }
+}
+
+.kley-landing-questions .accordion__intro .accordion__intro__img svg {
+  animation-name: rotationClose;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  width: 12px;
+  min-width: 12px;
+  height: 12px;
+  min-height: 12px;
+}
+
+.kley-landing-questions .accordion__intro .accordion__intro__img:hover {
+  background: #EF444A;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.kley-landing-questions .accordion__intro .accordion__intro__img:hover svg {
+  fill: #fff;
+}
+
+.kley-landing-questions .accordion__intro .accordion__intro__img:hover svg path {
+  fill: #fff;
+}
+
+.kley-landing-questions .accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  will-change: max-height;
+  transition: all 0.25s ease-out;
+  opacity: 0;
+  padding-top: 0;
+}
+
+.kley-landing-questions .accordion__active .accordion__intro .accordion__intro__img svg {
+  animation-name: rotationOpen;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.kley-landing-questions .accordion__active .accordion__content {
+  opacity: 1;
+  width: 100%;
+  margin-top: 23px;
+}
+
+.kley-landing-questions .accordion__active .accordion__content p {
+  padding: 0;
+  margin: 0;
+}
+
+/* --- Список документов / рекламных материалов --- */
+.kley-landing-documents {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.kley-landing-documents .kley-landing-document {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  color: #191919;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-decoration: underline;
+  transition: all 0.3s;
+  margin-bottom: 15px;
+}
+
+.kley-landing-documents .kley-landing-document svg {
+  width: 16px;
+  min-width: 16px;
+  margin-right: 5px;
+}
+
+.kley-landing-documents .kley-landing-document:hover {
+  transition: all 0.3s;
+  text-decoration: none;
+  color: #EF444A;
+}
+
+/* ------------------------------------------------------------
+   Стили ниже нужны только закомментированным в разметке
+   секциям «Видео» и «Статьи». Оставлены для полноты блока —
+   если их раскомментировать, понадобятся также slick и fancybox.
+   ------------------------------------------------------------ */
+
+.kley-landing-questions .fabrication__slide {
+  margin: 0 20px;
+}
+
+.kley-landing-questions .slick-list {
+  margin: 0 -20px;
+  margin-bottom: 30px;
+}
+
+.kley-landing-questions .text__18 {
+  color: #191919;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 119.8%;
+  margin-bottom: 13px
+}
+
+.kley-landing-questions .fabrication__slide__gallery {
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 13px;
+}
+
+.kley-landing-questions .title__32 {
+  color: #191919;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 84.3%;
+  letter-spacing: -0.8px;
+}
+
+.kley-landing-questions .slarleft.slick-arrow {
+  background: #ECEEF1;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 15px;
+  top: 30%;
+  right: auto;
+  z-index: 5;
+}
+
+.kley-landing-questions .slarright.slick-arrow {
+  background: #ECEEF1;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 15px;
+  top: 30%;
+  left: auto;
+}
+
+.kley-landing-videos {
+  position: relative;
+  display: flex;
+  width: calc(100% + 40px);
+  align-items: stretch;
+  flex-flow: row wrap;
+  margin-left: -40px;
+}
+
+.kley-landing-videos__wrap {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 894px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  .kley-landing-videos {
+    width: calc(100% + 24px);
+    margin-left: -24px;
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .kley-landing-videos {
+    width: calc(100% + 0px);
+    margin-left: 0px;
+    flex-flow: column nowrap;
+    margin-bottom: 48px;
+  }
+}
+
+.kley-landing-videos .kley-landing-video {
+  position: relative;
+  flex: 0 0 50%;
+  max-width: calc(50% - 40px);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+  .kley-landing-videos .kley-landing-video {
+    max-width: calc(50% - 24px);
+    margin-left: 24px;
+    padding: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .kley-landing-videos .kley-landing-video {
+    flex: 0 0 100%;
+    max-width: calc(100% - 0px);
+    margin-left: 0px;
+    margin-bottom: 24px;
+  }
+
+  .kley-landing-videos .kley-landing-video:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.kley-landing-videos .kley-landing-video::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 66.97%;
+}
+
+.kley-landing-videos .kley-landing-video:hover .video__play {
+  transition: all 0.3;
+  background: transparent;
+  border: 1px solid #EF444A;
+}
+
+.kley-landing-videos .kley-landing-video:hover .video__play svg {
+  fill: #EF444A;
+}
+
+.kley-landing-videos .kley-landing-video:hover .video__play svg path {
+  fill: #EF444A;
+}
+
+.kley-landing-videos .kley-landing-video__preview {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 5;
+  border-radius: 10px;
+}
+
+.kley-landing-videos .kley-landing-video__preview img,
+.kley-landing-videos .kley-landing-video__preview picture {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.kley-landing-videos .kley-landing-video__play {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  width: 73px;
+  height: 73px;
+  border-radius: 50px;
+  background: #EF444A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .kley-landing-videos .kley-landing-video__play {
+    width: 53px;
+    height: 53px;
+  }
+}
+
+/* --- Адаптив контейнера блока --- */
+@media (max-width: 1440px) {
+  .block7_content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .block7_content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .block7 {
+    padding-bottom: 30px;
+  }
+
+  .block7_content {
+    padding: 20px 20px 0;
+  }
+
+  .kley-landing-questions .accordion__intro p {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .section6__title {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section6__title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
