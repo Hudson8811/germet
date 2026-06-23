@@ -1,0 +1,465 @@
+@charset "UTF-8";
+
+$nr: no-repeat;
+$rb: right bottom;
+$rt: right top;
+$rc: right center;
+$cc: center center;
+$lc: left center;
+$lb: left bottom;
+$bc: bottom center;
+$i: !important;
+$tr: transparent;
+$bord: 1px solid #EAEAEA;
+$black: #000;
+$bcol: #f3ebdc;
+$ff2: "Arial", sans-serif;
+
+
+@import "_reset.scss";
+@import "_media.scss";
+
+@font-face {
+  font-family: "Arial";
+  src: url('../fonts/Arial.woff') format('woff'),
+  url('../fonts/Arial.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url('../fonts/Arial-Bold.woff') format('woff'),
+  url('../fonts/Arial-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Regular.woff') format('woff'),
+  url('../fonts/ProximaNova-Regular.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Bold.woff') format('woff'),
+  url('../fonts/ProximaNova-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+textarea {  
+  &:hover, &:active, &:focus {    
+    outline: none;    
+  }
+}
+
+body {  
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  position: relative;
+  min-height: 100vh;
+  &.ohi {
+    overflow: hidden;
+  }
+}
+
+
+
+.germetic-land__wrapper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;  
+  overflow: hidden;
+  display: flex;    
+  flex-direction: column;    
+  min-height: 100vh;
+  max-width: 1920px;  
+}
+
+
+.btn,
+.btn-o,
+*[class$="__btn"] {  
+  transition: 0.5s;
+  &:hover {
+    text-decoration: none;     
+  }
+}
+
+
+.germetic-land__hero {
+  background: url("../img/hero-bg.jpg") no-repeat center;  
+  background-size: cover;
+  padding-top: 159px;
+  padding-bottom: 113px;
+  position: relative;
+}
+
+.germetic-land__top {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 41px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #fff;
+  &.fixed {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    z-index: 15;
+    .germetic-land__top__row ul li a {
+      color: #272d3b;
+    }
+  }
+}
+
+.germetic-land__logo {
+  display: inline-block;
+  width: 58px;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.germetic-land__top__row {
+  display: flex;  
+  align-items: center;
+  justify-content: space-between;
+  ul {
+    display: flex;    
+    align-items: center;
+    gap: 20px;
+    li {
+      a {
+        font-weight: 700;
+        font-size: 16px;
+        color: #fff;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.germetic-land__top__col {
+  display: flex;  
+  align-items: center;  
+  justify-content: flex-end;          
+}
+
+.germetic-land__logo-mob {
+  display: none;
+}
+
+.germetic-land__hero__content {
+  display: flex;  
+  h1 {
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 0.97778;
+    color: #fff;
+    
+  }
+}
+
+.germetic-land__hero__content h1,
+.germetic-land__subtitle {
+  margin-bottom: 40px;
+}
+
+.germetic-land__subtitle {
+  font-weight: 400;
+  font-size: 28px;
+  color: #fff;  
+  line-height: 1.3;
+  font-family: $ff2;
+}
+
+
+
+.germetic-land__btn {
+  display: inline-flex;  
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
+  padding: 0 20px;
+  background: #ff2e17;
+  height: 41px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.germetic-land__banner {
+  padding: 137px 0 104px 0;
+  background: url("../img/banner.jpg") no-repeat center;  
+  background-size: cover;
+  .germetic-land__subtitle {
+    margin-bottom: 0 !important;
+  }  
+}
+
+.germetic-land__title {
+  font-weight: 700;
+  font-size: 94px;
+  line-height: 0.90426;
+  color: #fff;
+  margin-bottom: 41px;
+}
+
+.burger {
+  display: none;
+}
+
+.germetic-land__product {
+  padding: 140px 0;
+}
+
+.germetic-land-product__row {
+  display: flex;
+  gap: 53px;  
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.germetic-land-product__l {
+  width: 364px;  
+  flex: none;
+}
+
+.germetic-land-product__lg {
+  > li {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }  
+}
+
+.germetic-land-product__inn {
+  align-items: flex-end;
+  display: flex;          
+}
+
+.germetic-land-product__labels {
+  width: 55px;
+  margin-right: 59px;  
+  flex: none;
+  display: flex;  
+  flex-direction: column;  
+  justify-content: flex-end;
+  gap: 17px;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.germetic-land-product__img {  
+  flex: none;
+}
+
+.germetic-land-product__rinfo {
+  display: flex;  
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 52px;
+  p {
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 1.25;
+    color: #000;
+    margin-bottom: 9px;
+    font-family: "PT Sans", sans-serif;
+  }
+  ul {
+    display: flex;
+    gap: 14px;
+    flex-direction: column;
+    li {
+      display: flex;      
+      flex-direction: column;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      span {
+        display: block;
+        margin-top: 5px;
+        font-weight: 700;
+        font-size: 5px;
+        color: #000;
+        font-family: "PT Sans", sans-serif;
+      }
+    }
+  }
+}
+
+.germetic-land-product__r {
+  width: calc(100% - 364px - 53px);
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #272d3b;
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.germetic-land-product__title {
+  font-weight: 700;
+  font-size: 28px;
+  color: #272d3b;
+  margin-bottom: 30px;
+  font-family: $ff2;
+}
+
+.germetic-land-product__subtitle {
+  font-weight: 700;
+  font-size: 20px;
+  color: #272d3b;
+  margin-bottom: 10px;
+}
+
+.germetic-land-product__text {
+  font-weight: 700;
+  font-size: 24px;
+  color: #272d3b;
+  span {
+    color: #ff2e17;
+  }
+}
+
+.germetic-land-product__content {
+  padding-bottom: 41px;
+  border-bottom: 1px solid #828692;
+  > li {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.germetic-land-product__sl {
+  width: 100%;
+  margin-top: 28px;
+  padding: 0 64px;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  .slick-arrow {
+    position: absolute;
+    z-index: 12;  
+    border: none;
+    background: none;
+    font-size: 0;
+    background: #F5F7F9 url("../img/germ-arr.svg") no-repeat center;
+    top: calc(50% - 18px);
+    width: 36px;
+    height: 36px;      
+    background-color: #D9E2F2;
+    border-radius: 50%;
+    li {
+      button {
+        padding: 0;        
+        border: none;
+      }
+    }
+  }
+
+  .slick-list {
+
+  }
+  .slick-slide {
+    padding: 0 15px;
+  }
+
+  .slick-prev {  
+    left: 15px;  
+  }
+
+  .slick-next {  
+    right: 0;  
+    transform: rotate(180deg);
+  }
+}//sl
+
+.germetic-land-product__slide {
+  display: flex !important;  
+  align-items: flex-end;
+  cursor: pointer;
+  img {
+    width: 59px;
+    height: auto;
+    flex: none;
+    margin-right: 15px;
+  }  
+  span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #272d3b;
+    display: inline-block;
+    max-width: 159px;
+    padding-bottom: 23px;
+    font-family: $ff2;
+  }
+  &.active {
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.germetic-land-product__name {
+  display: none;
+}
+
+//2000
+
+@import "_after-styless";
+
+body {  
+  &.active {
+    background: url("../img/1920.jpg") no-repeat top -10px center;
+    .wrapper {
+      opacity: 0.4;
+    } 
+    .footer {
+      opacity: 0.4;
+    }
+    .get {
+      opacity: 0.4;
+    }
+  }    
+}

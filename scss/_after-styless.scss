@@ -1,0 +1,272 @@
+@media (max-width : 1364px) {
+  .germetic-land-product__slide span {
+    font-size: 16px;
+  }
+}//1268
+
+@media (max-width : 1199px) {
+  .germetic-land__logo-mob {
+    display: block;
+    width: 55px;
+    img {
+      max-width: 100%;
+      height: auto;
+      width: 100%;
+    }
+  }
+  .burger {
+    margin-top: -4px;    
+    display: inline-block;
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-left: auto;
+    position: relative;
+    z-index: 15;
+  }
+  .burger.burger-open {
+    background-color: transparent;
+    &:after,
+    &:before {
+
+    }
+  }
+
+  .burger:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+  .burger:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+  .burger.burger-open:before {
+    transform: rotate(45deg) translate(5px, 5px);
+    top: -9px;
+  }
+  .burger.burger-open:after {
+    transform: rotate(-45deg) translate(8px, -9px);
+    top: 10px;
+  }
+
+  .germetic-land__top.fixed {
+    .burger,
+    .burger:before,
+    .burger:after {
+      background-color: #000;
+    }
+    .burger.burger-open {
+      background-color: transparent;
+    }
+  }
+
+  .germetic-land__top {
+    padding: 33px 0;
+    border: none;
+  }
+  .germetic-land__top__col {
+    position: absolute;
+    width: 278px;
+    background-color: #FFF;    
+    transition: 0.5s;    
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    top: 0;
+    z-index: 14;    
+    left: 0;
+    transform: translateX(-150%);
+    padding: 28px 45px 53px 45px;
+  }
+  .germetic-land__top__col.open {
+    transform: translateX(0);
+  }
+  .germetic-land__top__row {
+   ul {    
+    flex-direction: column;
+    gap: 15px;    
+    align-items: flex-start;
+    li {
+     a {
+      font-weight: 700;
+      font-size: 16px;
+      color: #272d3b;
+    }
+  }
+}
+}
+.germetic-land__logo-mob {
+  margin-bottom: 45px;
+}
+
+.germetic-land__title,
+.germetic-land__hero__content h1 {
+  font-size: 60px;
+}
+
+.germetic-land__subtitle {
+  font-size: 24px;
+}
+
+.germetic-land__title,
+.germetic-land__hero__content h1,
+.germetic-land__subtitle {
+  margin-bottom: 20px;
+}
+.germetic-land__top {
+  padding: 21px 0;
+}
+}//1199
+
+@media (max-width : 991px) {
+  .germetic-land__title, .germetic-land__hero__content h1 {
+    font-size: 45px;
+  }
+  .germetic-land__subtitle {
+    font-size: 22px;
+  }
+  .germetic-land__title, .germetic-land__hero__content h1, .germetic-land__subtitle {
+    margin-bottom: 15px;
+  }
+  .germetic-land__banner,
+  .germetic-land__hero {
+    padding: 99px 0;
+  }
+  .germetic-land-product__row {    
+    flex-direction: column;
+  }
+
+  .germetic-land-product__r,
+  .germetic-land-product__l {
+    width: 100%;
+  }
+  .germetic-land-product__name {
+    display: block;
+    font-weight: 700;
+    font-size: 24px;
+    color: #272d3b;
+    margin-bottom: 26px;
+  }
+  .germetic-land-product__title {
+    display: none;
+  }
+  .germetic-land__product {
+    padding: 80px 0;
+  }
+}//991
+
+@media (max-width : 767px) {
+  .germetic-land-product__labels {
+    margin-right: 44px;
+  }
+  .germetic-land-product__subtitle {
+    font-size: 17px;
+    margin-bottom: 19px;
+  }
+  .germetic-land-product__r p {
+    font-size: 12px;
+  }
+  .germetic-land-product__text {
+    font-size: 16px;
+  }
+  .germetic-land__product {
+    padding: 60px 0 38px 0;
+  }
+  .germetic-land-product__slide img {
+    width: 40px;
+    margin-right: 5px;
+  }
+  .germetic-land-product__slide span {
+    font-size: 12px;
+    padding-bottom: 0;
+  }
+  .germetic-land-product__slide {
+    max-width: 120px;
+  }
+  .germetic-land-product__inn {    
+            justify-content: center;
+  }
+
+}//767
+
+@media (max-width : 640px) {
+
+}//640
+
+@media (max-width : 575px) {
+  .germetic-land__title,
+  .germetic-land__hero__content h1 {
+    font-size: 34px;
+    margin-bottom: 13px;
+  }
+  .germetic-land__subtitle {
+    margin-bottom: 23px;
+    max-width: 200px;
+  }
+  .germetic-land__title {
+
+  }
+  .germetic-land__banner {
+    padding: 58px 0;
+  }
+  .germetic-land__hero {
+    padding-bottom: 305px;
+  }
+  .germetic-land__btn {
+    height: 34px;
+    font-size: 14px;
+    padding: 0 15px;
+  }
+  .germetic-land__hero {
+    background-image: url('../img/hero-mobile.jpg');
+  }
+  .banner {
+    background-image: url('../img/banner-mob.jpg');
+    
+  }
+  .germetic-land-product__sl {
+  }
+  .germetic-land-product__sl {
+    margin-left: -3px;
+    margin-right: -3px;
+    padding: 0 6px;
+    .slick-arrow {
+    width: 25px;
+    height: 25px;      
+    }
+    .slick-prev {
+      left: -20px;
+    }
+    .slick-next {
+      right: -20px;
+    }
+    .slick-slide {
+      padding: 0 5px;
+    }
+  }
+}//575
+
+@media only screen and (max-width : 360px) {
+  body, body > * {
+    width: auto;
+    min-width: 360px;
+  }
+}
