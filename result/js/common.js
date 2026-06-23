@@ -1,11 +1,29 @@
 jQuery(document).ready(function( $ ) {
+  var iOS = navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  var clobj = "click";
+  if(iOS != null) clobj = "touchstart";
 
-
+  $("body").on(clobj, '[href*="#"]', function(e){
+    var fixed_offset = 100;
+    var target_offset = $(this.hash).offset().top;
+    if (this.hash === 'main') {
+      target_offset = 0;
+      fixed_offset = 0;
+    }
+    $('html,body').stop().animate({ scrollTop: target_offset - fixed_offset }, 1000);
+    e.preventDefault();
+  });
 
   $('.burger').click(function () {
     $(this).toggleClass('burger-open');
     $('body').toggleClass("body-open");
     $('.germetic-land__top__col').toggleClass("open");    
+  });
+
+  $('[data-js=burgerClose]').click(function () {
+    $('.burger').removeClass('burger-open');
+    $('body').removeClass("body-open");
+    $('.germetic-land__top__col').removeClass("open");
   });
 
   $('.germetic-land-product__sl').slick({

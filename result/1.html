@@ -22,7 +22,7 @@
 <body>
 
   <div class="germetic-land__wrapper">
-    <div class="germetic-land__hero">
+    <div class="germetic-land__hero" id="main">
       <div class="germetic-land__top">
         <div class="contain">
           <div class="germetic-land__top__row">
@@ -34,11 +34,11 @@
                 <img src="./img/logo-mob.png" alt="">
               </a>
               <ul>
-                <li><a href="">Главная</a></li>
-                <li><a href="">Герметики</a></li>
-                <li><a href="">Промо</a></li>
-                <li><a href="">Полезная информация</a></li>
-                <li><a href="">Контакты</a></li>              
+                <li><a href="#main" data-js="burgerClose">Главная</a></li>
+                <li><a href="#catalog" data-js="burgerClose">Герметики</a></li>
+                <li><a href="#video" data-js="burgerClose">Промо</a></li>
+                <li><a href="#help" data-js="burgerClose">Полезная информация</a></li>
+                <li><a href="#" data-js="burgerClose">Контакты</a></li>
               </ul>
             </div>
             <span class="burger"></span>
@@ -60,7 +60,7 @@
       </div>
     </div><!--hero-->
 
-    <div class="germetic-land__product">
+    <div class="germetic-land__product" id="catalog">
       <div class="contain">
         <div class="germetic-land-product__row">
           <div class="germetic-land-product__l">
@@ -325,7 +325,7 @@
       </video>
     </div>
 
-    <div id="block7" class="block7">
+    <div id="help" class="block7">
       <div class="block7_content">
         <div class="section6 kley-landing-questions" id="surfaces">
           <div class="section6__title blockTitle" data-aos="fade-up" data-aos-duration="800">
