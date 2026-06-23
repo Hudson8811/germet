@@ -80,7 +80,7 @@ jQuery(document).ready(function( $ ) {
 
 $(document).ready(function () {
   AOS.init();
-  
+
   const accordions = document.querySelectorAll(".accordion");
 
   const openAccordion = (accordion) => {
