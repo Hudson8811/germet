@@ -742,6 +742,11 @@ body {
   .germetic-land__product {
     padding: 80px 0; } }
 
+@media (min-width: 768px){
+.germetic-land-product__r p{
+  min-height: 98px;
+}
+}
 @media (max-width: 767px) {
   .germetic-land-product__labels {
     margin-right: 44px; }
@@ -817,15 +822,6 @@ body.active {
 
 
 
-
-.block7 *,
-.block7 *::before,
-.block7 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .block7 {
   font-family: 'Proxima Nova', tahoma, sans-serif;
   font-weight: normal;
@@ -840,14 +836,10 @@ body.active {
 /* --- Контейнер блока --- */
 .block7 {
   background: #fff;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
+  padding-top: 80px;
 }
 
-.block7_content {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 10px 40px 0;
-}
 
 .block7_title {
   font-size: 50px;
@@ -876,7 +868,6 @@ body.active {
   justify-content: flex-start;
   flex-flow: column nowrap;
   background: #fff;
-  padding-top: 3.1833910035vw;
 }
 
 .section6__title {
@@ -886,13 +877,11 @@ body.active {
   z-index: 25;
   color: rgb(25, 25, 25);
   font-weight: 600;
-  font-size: 50px;
-  line-height: 60px;
+  font-size: 36px;
+  line-height: 1.12;
+  padding-top: 18px;
 }
 
-.section6__title span {
-  color: rgb(133, 135, 140)
-}
 
 /* --- Аккордеоны (базовые стили) --- */
 .accordions {
@@ -902,14 +891,13 @@ body.active {
   justify-content: flex-start;
   align-items: flex-start;
   flex-flow: column nowrap;
-  margin-top: 3.1833910035vw;
+  margin-top: 19px;
 }
 
 .accordion {
   width: 100%;
   overflow: hidden;
   position: relative;
-  margin-bottom: 1.937716263vw;
   display: block;
 }
 
@@ -918,15 +906,16 @@ body.active {
   cursor: pointer;
   font-style: normal;
   font-weight: 600;
-  font-size: 1.937716263vw;
-  line-height: 2.3529411765vw;
+  font-size: 36px;
+  color: #272d3b;
+  line-height: 1.2;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  color: #191919;
   border-radius: 0;
-  padding-top: 1.5916955017vw;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 25px;
+  padding-bottom: 18px;
+  border-top: 1px solid #D9E2F2;
 }
 
 .accordion__intro p {
@@ -934,18 +923,19 @@ body.active {
   display: inline-block;
   width: 100%;
   font-style: normal;
-  font-weight: 600;
-  font-size: 1.937716263vw;
-  line-height: 2.3529411765vw;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.2;
+  margin-bottom: 0;
 }
 
 .accordion__intro .accordion__intro__img {
   position: relative;
-  width: 4.0830449827vw;
-  min-width: 4.0830449827vw;
-  height: 4.0830449827vw;
-  min-height: 4.0830449827vw;
-  background: #F0F0F0;
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+  min-height: 36px;
+  background: #D9E2F2;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -983,20 +973,6 @@ body.active {
   width: 100%;
 }
 
-.accordion__intro .accordion__intro__img:hover {
-  background: #ED1C24;
-  color: #fff;
-  transition: background 0.3s ease;
-}
-
-.accordion__intro .accordion__intro__img:hover svg {
-  fill: #fff;
-}
-
-.accordion__intro .accordion__intro__img:hover svg path {
-  fill: #fff;
-}
-
 @keyframes rotationOpen {
   0% {
     transform-origin: 50% 50%;
@@ -1021,129 +997,6 @@ body.active {
   }
 }
 
-/* --- Аккордеоны внутри kley-landing-questions (переопределения) --- */
-.kley-landing-questions .accordions {
-  width: 100%;
-}
-
-.kley-landing-questions .accordion {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 15px;
-  display: block;
-}
-
-@media only screen and (max-width: 992px) {
-  .kley-landing-questions .accordion {
-    margin-bottom: 25px;
-  }
-}
-
-.kley-landing-questions .accordion__intro {
-  position: relative;
-  cursor: pointer;
-  color: #FFF;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 91.3%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  border-radius: 0;
-  padding-top: 23px;
-  border-top: 1px solid #ccc;
-}
-
-.kley-landing-questions .accordion__intro p {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  color: #191919;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 91.3%;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.kley-landing-questions .accordion__intro .accordion__intro__img {
-  position: relative;
-  width: 50px;
-  min-width: 50px;
-  height: 50px;
-  min-height: 50px;
-  background: #F0F0F0;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media only screen and (max-width: 767px) {
-  .kley-landing-questions .accordion__intro .accordion__intro__img {
-    width: 51px;
-    min-width: 51px;
-    height: 51px;
-    min-height: 51px;
-  }
-}
-
-.kley-landing-questions .accordion__intro .accordion__intro__img svg {
-  animation-name: rotationClose;
-  animation-duration: 0.2s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  width: 12px;
-  min-width: 12px;
-  height: 12px;
-  min-height: 12px;
-}
-
-.kley-landing-questions .accordion__intro .accordion__intro__img:hover {
-  background: #EF444A;
-  color: #fff;
-  transition: background 0.3s ease;
-}
-
-.kley-landing-questions .accordion__intro .accordion__intro__img:hover svg {
-  fill: #fff;
-}
-
-.kley-landing-questions .accordion__intro .accordion__intro__img:hover svg path {
-  fill: #fff;
-}
-
-.kley-landing-questions .accordion__content {
-  max-height: 0;
-  overflow: hidden;
-  will-change: max-height;
-  transition: all 0.25s ease-out;
-  opacity: 0;
-  padding-top: 0;
-}
-
-.kley-landing-questions .accordion__active .accordion__intro .accordion__intro__img svg {
-  animation-name: rotationOpen;
-  animation-duration: 0.2s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
-.kley-landing-questions .accordion__active .accordion__content {
-  opacity: 1;
-  width: 100%;
-  margin-top: 23px;
-}
-
-.kley-landing-questions .accordion__active .accordion__content p {
-  padding: 0;
-  margin: 0;
-}
 
 /* --- Список документов / рекламных материалов --- */
 .kley-landing-documents {
@@ -1152,6 +1005,7 @@ body.active {
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  padding-bottom: 18px;
 }
 
 .kley-landing-documents .kley-landing-document {
@@ -1180,78 +1034,6 @@ body.active {
   transition: all 0.3s;
   text-decoration: none;
   color: #EF444A;
-}
-
-/* ------------------------------------------------------------
-   Стили ниже нужны только закомментированным в разметке
-   секциям «Видео» и «Статьи». Оставлены для полноты блока —
-   если их раскомментировать, понадобятся также slick и fancybox.
-   ------------------------------------------------------------ */
-
-.kley-landing-questions .fabrication__slide {
-  margin: 0 20px;
-}
-
-.kley-landing-questions .slick-list {
-  margin: 0 -20px;
-  margin-bottom: 30px;
-}
-
-.kley-landing-questions .text__18 {
-  color: #191919;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 119.8%;
-  margin-bottom: 13px
-}
-
-.kley-landing-questions .fabrication__slide__gallery {
-  position: relative;
-  width: 100%;
-  display: block;
-  overflow: hidden;
-  margin-bottom: 13px;
-}
-
-.kley-landing-questions .title__32 {
-  color: #191919;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 84.3%;
-  letter-spacing: -0.8px;
-}
-
-.kley-landing-questions .slarleft.slick-arrow {
-  background: #ECEEF1;
-  width: 50px;
-  height: 50px;
-  min-width: 50px;
-  min-height: 50px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 15px;
-  top: 30%;
-  right: auto;
-  z-index: 5;
-}
-
-.kley-landing-questions .slarright.slick-arrow {
-  background: #ECEEF1;
-  width: 50px;
-  height: 50px;
-  min-width: 50px;
-  min-height: 50px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 15px;
-  top: 30%;
-  left: auto;
 }
 
 .kley-landing-videos {
@@ -1398,45 +1180,17 @@ body.active {
 }
 
 /* --- Адаптив контейнера блока --- */
-@media (max-width: 1440px) {
-  .block7_content {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .block7_content {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
 
 @media (max-width: 768px) {
   .block7 {
-    padding-bottom: 30px;
-  }
-
-  .block7_content {
-    padding: 20px 20px 0;
-  }
-
-  .kley-landing-questions .accordion__intro p {
-    font-size: 20px;
-    line-height: 26px;
+    padding: 41px 0 41px;
   }
 
   .section6__title {
-    font-size: 50px;
+    font-size: 26px;
   }
 }
 
-@media (max-width: 480px) {
-  .section6__title {
-    font-size: 30px;
-    line-height: 36px;
-  }
-}
 
 
 .video-block video {
@@ -1445,12 +1199,40 @@ body.active {
   height: auto;
   aspect-ratio: 1 / 0.5;
   object-fit: cover;
-
-
+  position: relative;
 }
 
-@media (min-width: 1401px) {
-  .video-block video {
-    position: relative;
+
+@media (max-width: 768px) {
+  .section6__title{
+    padding-top: 0;
+  }
+  .section6__title span{
+    display: block;
+  }
+  .accordions{
+    margin-top: 27px;
+  }
+  .accordion__intro .accordion__intro__img{
+    width: 25px;
+    min-width: 25px;
+    height: 25px;
+    min-height: 25px;
+  }
+  .accordion__intro .accordion__intro__img svg {
+    width: 7px;
+  }
+  .accordion__intro{
+    font-size: 15px;
+    padding-top: 21px;
+    padding-bottom: 19px;
+  }
+  .accordion__intro p{
+    font-size: 15px;
+  }
+  .kley-landing-documents .kley-landing-document {
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 15px;
   }
 }
