@@ -492,7 +492,8 @@ body {
   flex: none;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  min-height: 517px;
   gap: 17px; }
   .germetic-land-product__labels img {
     max-width: 100%;
