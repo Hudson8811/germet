@@ -342,7 +342,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 1920px; }
+  max-width: 1440px; }
 
 .btn,
 .btn-o,
@@ -357,7 +357,7 @@ body {
   background: url("../img/hero-bg.jpg") no-repeat center;
   background-size: cover;
   padding-top: 159px;
-  padding-bottom: 113px;
+  padding-bottom: 68px;
   position: relative; }
 
 .germetic-land__top {
@@ -365,8 +365,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  padding-top: 41px;
-  padding-bottom: 24px;
+  padding-top: 37px;
+  padding-bottom: 15px;
   border-bottom: 1px solid #fff; }
   .germetic-land__top.fixed {
     background: rgba(255, 255, 255, 0.55);
@@ -392,7 +392,7 @@ body {
   .germetic-land__top__row ul {
     display: flex;
     align-items: center;
-    gap: 20px; }
+    gap: 40px; }
     .germetic-land__top__row ul li a {
       font-weight: 700;
       font-size: 16px;
@@ -441,18 +441,25 @@ body {
     text-decoration: none; }
 
 .germetic-land__banner {
-  padding: 137px 0 104px 0;
+  padding: 137px 0 110px 0;
   background: url("../img/banner.jpg") no-repeat center;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
   background-size: cover; }
   .germetic-land__banner .germetic-land__subtitle {
     margin-bottom: 0 !important; }
+
+.germetic-land__banner .contain{
+  max-width: 1140px;
+}
 
 .germetic-land__title {
   font-weight: 700;
   font-size: 94px;
   line-height: 0.90426;
   color: #fff;
-  margin-bottom: 41px; }
+  margin-bottom: 46px; }
 
 .burger {
   display: none; }
@@ -678,7 +685,8 @@ body {
     border: none; }
   .germetic-land__top__col {
     position: absolute;
-    width: 278px;
+    width: 71%;
+    min-width: 278px;
     background-color: #FFF;
     transition: 0.5s;
     margin-top: 0px;
@@ -691,12 +699,12 @@ body {
     z-index: 14;
     left: 0;
     transform: translateX(-150%);
-    padding: 28px 45px 53px 45px; }
+    padding: 28px 45px 44px 34px; }
   .germetic-land__top__col.open {
     transform: translateX(0); }
   .germetic-land__top__row ul {
     flex-direction: column;
-    gap: 15px;
+    gap: 23px;
     align-items: flex-start; }
     .germetic-land__top__row ul li a {
       font-weight: 700;
@@ -742,10 +750,16 @@ body {
   .germetic-land__product {
     padding: 80px 0; } }
 
-@media (min-width: 768px){
+@media (min-width: 1200px){
 .germetic-land-product__r p{
   min-height: 98px;
 }
+  .germetic-land-product__text{
+    min-height: 58px;
+  }
+  .germetic-land-product__content{
+    padding-bottom: 12px;
+  }
 }
 @media (max-width: 767px) {
   .germetic-land-product__labels {
@@ -776,8 +790,9 @@ body {
     font-size: 34px;
     margin-bottom: 13px; }
   .germetic-land__subtitle {
+    font-size: 13px;
     margin-bottom: 23px;
-    max-width: 200px; }
+    max-width: 265px; }
   .germetic-land__banner {
     padding: 58px 0; }
   .germetic-land__hero {
@@ -1234,5 +1249,15 @@ body.active {
     font-size: 14px;
     line-height: 1.2;
     margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 1200px){
+  .germetic-land__top{
+    transition: 0.3s ease;
+  }
+  .germetic-land__top.fixed {
+    padding-top: 6px;
+    padding-bottom: 3px;
   }
 }

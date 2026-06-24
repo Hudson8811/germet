@@ -4,7 +4,10 @@ jQuery(document).ready(function( $ ) {
   if(iOS != null) clobj = "touchstart";
 
   $("body").on(clobj, '[href*="#"]', function(e){
-    var fixed_offset = 100;
+    var fixed_offset = 77;
+    if ($(window).width() >= 1200) {
+      fixed_offset = 44;
+    }
     var target_offset = $(this.hash).offset().top;
     if (this.hash === 'main') {
       target_offset = 0;
