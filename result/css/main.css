@@ -501,6 +501,37 @@ body {
 .germetic-land-product__img {
   flex: none; }
 
+.germetic-land-product__img--multi{
+  position: relative;
+}
+.germetic-land-product__img--multi img:not(:first-child){
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.germetic-land-product__img--multi img:not(.active){
+  opacity: 0;
+}
+
+.js-change-img{
+  position: relative;
+}
+.js-change-img.active::before{
+  content: "";
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 3px solid #272d3b;
+}
+
+.js-change-img img{
+  cursor: pointer;
+}
+
 .germetic-land-product__rinfo {
   display: flex;
   justify-content: flex-end;

@@ -137,4 +137,22 @@ $(document).ready(function () {
       }
     };
   });
+
+
+  $(document).on('click', '.js-change-img', function () {
+    var $this = $(this);
+
+    if ($this.hasClass('active')) return;
+
+    $this.addClass('active').siblings('.js-change-img').removeClass('active');
+
+    var index = $this.index();
+
+    var $li = $this.closest('.germetic-land-product__inn').length
+        ? $this.closest('.germetic-land-product__inn')
+        : $this.closest('li');
+
+    var $imgs = $li.find('.germetic-land-product__img--multi img');
+    $imgs.removeClass('active').eq(index).addClass('active');
+  });
 });
